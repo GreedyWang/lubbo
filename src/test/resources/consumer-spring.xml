@@ -21,4 +21,6 @@
         <constructor-arg name="serviceDiscovery" ref="serviceDiscovery"/>
     </bean>
 
+    <lubbo:service interface="Echo" ref="EchoService"/>
+
 </beans>
