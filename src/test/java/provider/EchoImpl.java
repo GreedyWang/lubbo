@@ -1,5 +1,6 @@
 package provider;
 
+import Service.Echo;
 import common.RpcService;
 
 @RpcService(Echo.class)

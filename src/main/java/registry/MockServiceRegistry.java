@@ -4,9 +4,10 @@ package registry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 
 public class MockServiceRegistry implements ServiceRegistry,ServiceDiscovery {
@@ -46,14 +47,12 @@ public class MockServiceRegistry implements ServiceRegistry,ServiceDiscovery {
 
     @Override
     public String discover() {
-        FileInputStream in = null;
+        FileReader in = null;
         String context = "";
         try {
-            in = new FileInputStream(file);
-            byte[] b = new byte[1024];
-            while(in.read(b) != -1) {
-                context += b.toString();
-            }
+            in = new FileReader(file);
+            BufferedReader read = new BufferedReader(in);
+            context = read.readLine();
         }
         catch (IOException e) {
             e.printStackTrace();
