@@ -15,7 +15,6 @@ public class Tester {
     @Autowired
     private Echo echo;
 
-
     @Test
     public void helloTest2() {
         String result = echo.echo("hello world");
