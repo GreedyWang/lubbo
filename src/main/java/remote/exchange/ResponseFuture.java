@@ -1,8 +1,6 @@
 package remote.exchange;
 
-/**
- * todo: N -> 1:1 
- */
+
 public interface ResponseFuture {
 
     /**

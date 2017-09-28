@@ -1,9 +1,5 @@
 package rpc.params;
 
-/**
- * RPC Request
- * @author huangyong
- */
 public class RpcRequest {
 
     private String requestId;

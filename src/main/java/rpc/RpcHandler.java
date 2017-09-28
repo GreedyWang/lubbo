@@ -12,10 +12,7 @@ import rpc.params.RpcResponse;
 
 import java.util.Map;
 
-/**
- * RPC Handler（RPC request processor）
- * @author luxiaoxun
- */
+
 public class RpcHandler extends SimpleChannelInboundHandler<RpcRequest> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RpcHandler.class);
